@@ -11,16 +11,45 @@
         "prefix": "enc",
         "body": "# -*- coding=utf-8 -*-\n$0"
     },
+    "main": {
+        "prefix": "main",
+        "body": "import sys\n\n\ndef main():\n\treturn 0\n\nif __name__ == \"__main__\":\n\tsys.exit(main())$0"
+    },
     "from ... import ...": {
-        "prefix": "fr",
+        "prefix": "from",
         "body": "from ${1:package/module} import ${2:names}$0"
     },
     "new class": {
-        "prefix": "cls",
+        "prefix": "cless",
         "body": "class ${1:ClassName}(${2:object}):\n\t\"\"\"${3:docstring for $1.}\"\"\"\n\tdef __init__(self, ${4:arg}):\n\t\t${5:super($1, self).__init__()}\n\t\tself.arg = arg\n\t\t$0"
     },
     "new class method": {
-        "prefix": "defs",
+        "prefix": "defc",
         "body": "def ${1:MethodName}(self, ${2:arg}):\n\t${3:pass}$0"
+    },
+    "new class property": {
+        "prefix": "property",
+        "body": "def ${1:foo}():\n    doc = \"${2:The $1 property.}\"\n    def fget(self):\n        ${3:return self._$1}\n    def fset(self, value):\n        ${4:self._$1 = value}\n    def fdel(self):\n        ${5:del self._$1}\n    return locals()\n$1 = property(**$1())$0"
+    },
+    "if": {
+        "prefix": "if",
+        "body": "if ${1:condition}:\n\t${2:pass}$0"
+    },
+    "for": {
+        "prefix": "for",
+        "body": "for ${1:value} in ${2:iterabele}:\n\t${3:pass}$0"
+    },
+    "enumerate": {
+        "prefix": "enumerate",
+        "body": "for ${1:index}, ${2:value} in enumerate(${3:iterable}):\n\t${4:pass}$0"
+    },
+    "while": {
+        "prefix": "while",
+        "body": "while ${1:condition}:\n\t${2:pass}$0"
+    },
+    "try:except": {
+        "prefix": "try",
+        "body": "try:\n\t${1:pass}\nexcept ${2:exception} as ${3:e}:\n\tpass$0"
     }
+
 }
