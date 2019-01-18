@@ -1,6 +1,6 @@
 {
     "name": "ws-vc-python-snippets",
-    "displayName": "WS Visual Studio Python Snippets",
+    "displayName": "WS Visual Studio Code Python Snippets",
     "description": "Corporative Visual Studio Code extensions for Python development",
     "version": "0.1.1",
     "publisher": "wsbespalov",
@@ -33,13 +33,21 @@
         "snippets"
     ],
     "preview": true,
-    "categpries": [
-        "Extension Packs"
+    "categories": [
+        "Snippets"
     ],
     "extensionDependencies": [
         "ms-python.python",
         "visualstudioexptteam.vscodeintellicode",
         "wholroyd.jinja",
         "batisteo.vscode-django"
-    ]
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "python",
+                "path": "./snippets/python.json"
+            }
+        ]
+    }
 }
