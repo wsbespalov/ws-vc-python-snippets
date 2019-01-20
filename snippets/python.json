@@ -53,6 +53,6 @@
     },
     "print variable": {
         "prefix": "prv",
-        "body": "print(\"${1:variable}: {}\".format(${2:variable})"
+        "body": "print(\"${1:variable}: {}\".format(${1:variable}))"
     }
 }
