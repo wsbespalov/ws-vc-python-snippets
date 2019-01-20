@@ -50,6 +50,9 @@
     "try:except": {
         "prefix": "try",
         "body": "try:\n\t${1:pass}\nexcept ${2:exception} as ${3:e}:\n\tpass$0"
+    },
+    "print variable": {
+        "prefix": "prv",
+        "body": "print(\"${1:variable}: {}\".format(${2:variable})"
     }
-
 }
