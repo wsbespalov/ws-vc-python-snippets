@@ -2,7 +2,7 @@
     "name": "ws-vc-python-snippets",
     "displayName": "WS Visual Studio Code Python Snippets",
     "description": "Corporative Visual Studio Code extensions for Python development",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "publisher": "wsbespalov",
     "author": {
         "name": "Bespalov Dmitry",
